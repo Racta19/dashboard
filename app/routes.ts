@@ -1,3 +1,8 @@
-import { type RouteConfig, index } from "@react-router/dev/routes";
+import { type RouteConfig, layout, route } from "@react-router/dev/routes";
 
-export default [index("routes/home.tsx")] satisfies RouteConfig;
+export default [
+    layout('/routes/admin/admin-layout', [
+        route(/*Path:*/'dashboard', /*File:*/ 'routes/admin/dashboard.tsx') //this is how you route using rotue in next.js
+    ]),
+
+] satisfies RouteConfig;
