@@ -18,6 +18,7 @@ export default defineConfig(config => {
     plugins: [tailwindcss(), reactRouter(),sentryReactRouter(sentryConfig, config), tsconfigPaths()],
     ssr:{
         noExternal: [/@syncfusion/]
-    }
+    }, 
+    
   }
 });

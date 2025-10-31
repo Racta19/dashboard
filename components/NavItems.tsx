@@ -22,8 +22,8 @@ const NavItems = ({handleClick}: {handleClick ?: () => void}) => {
 
         <div className='container'>
           <nav>{sidebarItems.map(({id, href, icon, label}) => (
-            <div>
-              <NavLink to={href} key={id}>
+            <div key={id}>
+              <NavLink to={href} >
                 {({isActive}: {isActive : boolean}) => (
                   <div className={cn('group nav-item', {
                     'bg-primary-100 !text-white': isActive
@@ -45,7 +45,7 @@ const NavItems = ({handleClick}: {handleClick ?: () => void}) => {
               <p>{user?.email}</p>
             
             </article>
-            {/* Button has to be worked on  */}
+            {/* Button has to be work completed */}
             <button onClick={handleLogout} className='cursor-pointer'>
               <img src="/assets/icons/logout.svg" alt="logout" className='size-6' />
             </button>
